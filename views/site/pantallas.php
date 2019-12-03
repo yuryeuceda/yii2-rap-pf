@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
         <div class="panel-heading" style="margin-bottom: 0px;
-    padding: 0px 15px;">>
+    padding: 0px 15px;">
             <h3 class="panel-title">Ficha de solicitud de Creditos</h3>
         </div>
         <div class="panel-body">
