@@ -39,8 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="panel panel-primary">
 
 
-        <div class="panel-heading" style="margin-bottom: 0px;
-    padding: 0px 15px;">
+        <div class="panel-heading">
             <h3 class="panel-title">Ficha de solicitud de Creditos</h3>
         </div>
         <div class="panel-body">
@@ -68,7 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <div class="panel panel-info">
-        <div class="panel-heading">
+        <div class="panel-heading" style="margin-bottom: 0px;
+    padding: 0px 15px;">
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">Datos Generales del Afiliado</a></li>
                 <li><a data-toggle="tab" href="#menu1">Informacion del empleo del afiliado</a></li>
