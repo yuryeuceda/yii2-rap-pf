@@ -37,30 +37,7 @@ $form = ActiveForm::begin([
 
     <div class="panel panel-primary">
 
-        <?php
-        NavBar::begin([
-            'brandLabel' => 'My Company',
 
-            'options' => [
-                'class' => 'navbar-inverse navbar-fixed-top',
-            ],
-        ]);
-        echo Nav::widget([
-            'options' => ['class' => 'navbar-nav navbar-right'],
-            'items' => [
-                ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
-                Yii::$app->user->isGuest ?
-                    ['label' => 'Login', 'url' => ['/site/login']] : [
-                        'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                        'url' => ['/site/logout'],
-                        'linkOptions' => ['data-method' => 'post']
-                    ],
-            ],
-        ]);
-        NavBar::end();
-        ?>
         <div class="panel-heading">
             <h3 class="panel-title">Ficha de solicitud de Creditos</h3>
         </div>
@@ -101,53 +78,102 @@ $form = ActiveForm::begin([
         <div class="panel-body">
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-md-6" style=" background-color:lightgray; ">
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tid')->textInput() ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Nid') ?>
+                                    </div>
+                                </div>
 
-                    <div class="row form-group">
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'Tid')->textInput() ?>
                             </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'Nid') ?>
-                            </div>
-                        </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'emailA') ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Aaf') ?>
+                                    </div>
+                                </div>
 
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'emailA') ?>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tfijo') ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Naf') ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tcelular') ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'Aaf') ?>
-                            </div>
-                        </div>
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tid')->textInput() ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Nid') ?>
+                                    </div>
+                                </div>
 
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'Tfijo') ?>
                             </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'Naf') ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-lg-3">
-                            <div class="">
-                                <?= $form->field($model, 'Tcelular') ?>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'emailA') ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Aaf') ?>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tfijo') ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Naf') ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tcelular') ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="menu1" class="tab-pane fade">
@@ -176,8 +202,8 @@ $form = ActiveForm::begin([
 
                 </div>
             </div>
-            <div class="panel-footer" style="margin:auto;">
-                <div class="form-group">
+            <div class="panel-footer">
+                <div class="form-group" style="margin:auto;">
                     <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
             </div>
