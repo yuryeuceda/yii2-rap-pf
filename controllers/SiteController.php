@@ -42,7 +42,7 @@ class SiteController extends Controller
     public function actionPantallas()
     {
         $model = new pantallas();
-        return $this->render('Pantallas', ['model' =>  $model]);
+        return $this->render('pantallas', ['model' =>  $model]);
     }
 
     /**
