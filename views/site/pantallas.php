@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="panel panel-info">
         <div class="panel-heading" style="margin-bottom: 0px;
-    padding: 0px 15px;">
+    padding: 0px 15px; border-bottom:0px;">
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">Datos Generales del Afiliado</a></li>
                 <li><a data-toggle="tab" href="#menu1">Informacion del empleo del afiliado</a></li>
