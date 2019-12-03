@@ -64,7 +64,7 @@ $form = ActiveForm::begin([
     <div class="panel panel-info">
         <div class="panel-heading" style="margin-bottom: 0px;
     padding: 0px 15px;">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs" style="border-bottom: 0px solid #ddd;">
                 <li class="active"><a data-toggle="tab" href="#home">Datos Generales del Afiliado</a></li>
                 <li><a data-toggle="tab" href="#menu1">Informacion del empleo del afiliado</a></li>
                 <li><a data-toggle="tab" href="#menu2">Condiciones del credito solicitadas</a></li>
@@ -131,8 +131,6 @@ $form = ActiveForm::begin([
                             <div class="panel panel-primary">
                                 <div class="panel-heading">Persona 2</div>
                                 <div class="panel-body" style="    background-color: ghostwhite;">
-
-
                                     <div class="row form-group">
                                         <div class="col-lg-6">
                                             <div class="">
@@ -144,7 +142,6 @@ $form = ActiveForm::begin([
                                                 <?= $form->field($model, 'Nid') ?>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-lg-6">
@@ -157,7 +154,6 @@ $form = ActiveForm::begin([
                                                 <?= $form->field($model, 'Aaf') ?>
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-lg-6">
@@ -185,41 +181,87 @@ $form = ActiveForm::begin([
                     </div>
                 </div>
                 <div id="menu1" class="tab-pane fade">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="">
-                                <?= $form->field($model, 'fechaSol')->textInput() ?>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="">
-                                <?= $form->field($model, 'numConf') ?>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Detalle de Empleo</div>
+                        <div class="panel-body" style="    background-color: ghostwhite;">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <div class="">
+                                            <?= $form->field($model, 'Naf')->label('Nombre de
+                                    empresa') ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+
+                                        <div class="">
+                                            <?= $form->field($model, 'Naf')->label('Fecha de
+                                    ingreso') ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+
+                                        <div class="">
+                                            <?= $form->field($model, 'Naf')->label('Antiguedad
+                                    laboral') ?>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Detalle de ingresos del
+                            afiliado</div>
+                        <div class="panel-body" style="    background-color: ghostwhite;">
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Tid')->label('Salario
+                                    nominal') ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'Nid')->label('salario
+                                    Neto') ?>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="">
+                                        <?= $form->field($model, 'emailA')->label('Otros
+                                    ingresos') ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-
-
+                    </div>
                 </div>
                 <div id="menu2" class="tab-pane fade">
                     <div class="row">
                         <h3>Menu 2</h3>
                         <p>Some content in menu 2.</p>
                     </div>
-
-
-                </div>
-            </div>
-            <div class="panel-footer">
-                <div class="form-group" style="margin:auto;">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
             </div>
 
+
+        </div>
+        <div class="panel-footer">
+            <div class="form-group" style="margin:auto;">
+                <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+            </div>
         </div>
 
     </div>
 
+</div>
 
 
-    <?php ActiveForm::end(); ?>
+
+<?php ActiveForm::end(); ?>
