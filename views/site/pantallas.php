@@ -8,7 +8,6 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 
-
 $form = ActiveForm::begin([
     'layout' => 'horizontal',
     'fieldConfig' => [
@@ -22,9 +21,6 @@ $form = ActiveForm::begin([
         ],
     ],
 ]);
-
-
-
 
 
 ?>
@@ -80,7 +76,7 @@ $form = ActiveForm::begin([
                 <div id="home" class="tab-pane fade in active">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="panel panel-success">
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">Persona 1</div>
                                 <div class="panel-body" style="    background-color: ghostwhite;">
                                     <div class="row form-group">
@@ -131,9 +127,8 @@ $form = ActiveForm::begin([
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-6">
-                            <div class="panel panel-default">
+                            <div class="panel panel-primary">
                                 <div class="panel-heading">Persona 2</div>
                                 <div class="panel-body" style="    background-color: ghostwhite;">
 
@@ -187,12 +182,8 @@ $form = ActiveForm::begin([
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
-
                 <div id="menu1" class="tab-pane fade">
                     <div class="row">
                         <div class="col-lg-4">
