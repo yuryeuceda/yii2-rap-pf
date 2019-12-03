@@ -79,100 +79,117 @@ $form = ActiveForm::begin([
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
                     <div class="row">
-                        <div class="col-md-6" style=" background-color:lightgray; ">
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Tid')->textInput() ?>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Nid') ?>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'emailA') ?>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Aaf') ?>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Tfijo') ?>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Naf') ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Tcelular') ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-md-6">
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Tid')->textInput() ?>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Nid') ?>
-                                    </div>
-                                </div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">Persona 1</div>
+                                <div class="panel-body" style="    background-color: ghostwhite;">
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Tid')->textInput() ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Nid') ?>
+                                            </div>
+                                        </div>
 
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'emailA') ?>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Aaf') ?>
-                                    </div>
-                                </div>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'emailA') ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Aaf') ?>
+                                            </div>
+                                        </div>
 
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Tfijo') ?>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Naf') ?>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Tfijo') ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Naf') ?>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <?= $form->field($model, 'Tcelular') ?>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Tcelular') ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Persona 2</div>
+                                <div class="panel-body" style="    background-color: ghostwhite;">
+
+
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Tid')->textInput() ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Nid') ?>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'emailA') ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Aaf') ?>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Tfijo') ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Naf') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'Tcelular') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
 
