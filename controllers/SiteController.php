@@ -10,7 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Confirmaciones;
-use app\models\ConfirmacionAccesoFinancieroLP;
+use app\models\ConfirmacionAccesoFinanciamientoLP;
 
 class SiteController extends Controller
 {
