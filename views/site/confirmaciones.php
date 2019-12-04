@@ -24,7 +24,7 @@ $form = ActiveForm::begin([
 
 
 ?>
-
+<!-- Comentario de prueba -->
 <div class="container">
     <header style="margin:auto;">
         <h2><?= Html::encode($this->title) ?></h2>
