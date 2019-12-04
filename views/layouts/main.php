@@ -24,7 +24,9 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
+<!-- 
 <meta http-equiv="refresh" content="10; url="<?php echo $_SERVER['PHP_SELF']; ?>">
+ -->
 
 <body>
     <?php $this->beginBody() ?>
@@ -46,6 +48,7 @@ AppAsset::register($this);
                 ['label' => 'Contact', 'url' => ['/site/contact']],
                 ['label' => 'Confirmaciones', 'url' => ['/site/confirmaciones']],
                 ['label' => 'Confirmacion Acceso Financiero', 'url' => ['/site/confirmacion-acceso-financiamiento']],
+                ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consultaconfirmacion']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(

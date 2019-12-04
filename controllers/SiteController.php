@@ -11,6 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Confirmaciones;
 use app\models\ConfirmacionAccesoFinanciamiento;
+use app\models\ConsultaConfirmaciones;
+
 
 
 class SiteController extends Controller
@@ -51,6 +53,12 @@ class SiteController extends Controller
     {
         $model = new ConfirmacionAccesoFinanciamiento();
         return $this->render('confirmacionAccesoFinanciamiento', ['model' =>  $model]);
+    }
+
+    public function actionConsultaConfirmaciones()
+    {
+        $model = new ConsultaConfirmaciones();
+        return $this->render('consultaconfirmacion', ['model' =>  $model]);
     }
 
 
