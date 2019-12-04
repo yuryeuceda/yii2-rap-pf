@@ -8,7 +8,7 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class pantallas extends Model
+class Confirmaciones extends Model
 {
     public $fechaSol;
     public $numConf;
@@ -35,26 +35,6 @@ class pantallas extends Model
             // email has to be a valid email address
             ['fechaSol', 'email'],
 
-        ];
-    }
-
-    /**
-     * @return array customized attribute labels
-     */
-    public function attributeLabels()
-    {
-        return [
-            'fechaSol' => 'Fecha de Solicitud',
-            'numConf' => 'Numero de Confirmacion',
-            'Tpres' => 'Tipo de Prestamo *',
-
-            'Tid' => 'Tipo de Identificacion *',
-            'Nid' => 'Numero de Identificacion *',
-            'Naf' => 'Nombre de Afiliado *',
-            'Aaf' => 'Apellido de Afiliado *',
-            'Tcelular' => 'Telefono Celular *',
-            'Tfijo' => 'Telefono fijo',
-            'emailA' => 'Email *',
         ];
     }
 }

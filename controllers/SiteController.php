@@ -9,7 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\pantallas;
+use app\models\Confirmaciones;
 
 class SiteController extends Controller
 {
@@ -41,8 +41,8 @@ class SiteController extends Controller
 
     public function actionPantallas()
     {
-        $model = new pantallas();
-        return $this->render('pantallas', ['model' =>  $model]);
+        $model = new Confirmaciones();
+        return $this->render('confirmaciones', ['model' =>  $model]);
     }
 
     /**
