@@ -10,7 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Confirmaciones;
-use app\models\ConfirmacionAccesoFinanciamientoLP;
+use app\models\ConfirmacionAccesoFinanciamiento;
+use app\models\Prueba;
 
 class SiteController extends Controller
 {
@@ -46,11 +47,13 @@ class SiteController extends Controller
         return $this->render('confirmaciones', ['model' =>  $model]);
     }
 
-    public function actionConfirmacionAccesoFinanciamientoLP()
+    public function actionConfirmacionAccesoFinanciamiento()
     {
-        $model = new ConfirmacionAccesoFinanciamientoLP();
-        return $this->render('confirmacionAccesoFinanciamientoLP', ['model' =>  $model]);
+        $model = new ConfirmacionAccesoFinanciamiento();
+        return $this->render('confirmacionAccesoFinanciamiento', ['model' =>  $model]);
     }
+
+
 
     /**
      * {@inheritdoc}
