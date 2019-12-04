@@ -41,20 +41,13 @@ $form = ActiveForm::begin([
             <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="input-group">
-                        <?= $form->field($model, 'fechaSol')->textInput()->label('Fecha de Solicitud') ?>
-
-                    </div>
+                    <?= $form->field($model, 'fechaSol')->textInput()->label('Fecha de Solicitud') ?>
                 </div>
                 <div class="col-lg-4">
-                    <div class="input-group">
-                        <?= $form->field($model, 'numConf')->label('Numero de Confirmacion') ?>
-                    </div>
+                    <?= $form->field($model, 'numConf')->label('Numero de Confirmacion') ?>
                 </div>
                 <div class="col-lg-4">
-                    <div class="input-group">
-                        <?= $form->field($model, 'Tpres')->label('Tipo de Prestamo *') ?>
-                    </div>
+                    <?= $form->field($model, 'Tpres')->label('Tipo de Prestamo *') ?>
                 </div>
             </div><!-- /.row -->
         </div>
