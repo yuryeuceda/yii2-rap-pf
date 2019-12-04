@@ -57,21 +57,23 @@ $form = ActiveForm::begin([
                         </div>
                         <div class="panel-body">
                             <div class="row form-group">
-                                <div class="col-md-4">
-                                    <?= $form->field($model, 'numeroSolicitud')->textInput()->label('Numero Solicitud') ?>
+                                <div class="col-md-6">
+                                    <?= $form->field($model, 'numeroSolicitud')->label('Numero Solicitud') ?>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <?= $form->field($model, 'numeroIdentificacion')->label('Numero Identificacion') ?>
-                                </div>
-                                <div class="col-md-4">
-                                    <?= $form->field($model, 'estatusSolicitud')->label('Estatus Solicitud') ?>
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <div class="col-md-4">
+                                <div class="col-md-6">
+                                    <?= $form->field($model, 'estatusSolicitud')->label('Estatus Solicitud') ?>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <?= $form->field($model, 'fechaSolicitudInicio')->textInput()->label('Fecha Inicio') ?>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <?= $form->field($model, 'fechaSolicitudFinal')->label('Fecha Final') ?>
                                 </div>
 
@@ -80,9 +82,16 @@ $form = ActiveForm::begin([
                         </div>
                     </div>
                 </div>
+
             </div>
 
 
+        </div>
+        <div class="panel-footer clearfix text-center">
+
+            <div class="form-group" style="margin:auto;">
+                <?= Html::submitButton('Buscar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
+            </div>
         </div>
     </div>
 </div>
