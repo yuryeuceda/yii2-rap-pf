@@ -39,7 +39,7 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionPantallas()
+    public function actionConfirmaciones()
     {
         $model = new Confirmaciones();
         return $this->render('confirmaciones', ['model' =>  $model]);
