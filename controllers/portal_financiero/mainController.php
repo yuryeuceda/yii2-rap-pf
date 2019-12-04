@@ -1,4 +1,6 @@
-namespace app\controllers\portal-financiero;
+<?php
+
+namespace app\controllers\portal_financiero;
 
 use Yii;
 use app\models\Post;
@@ -32,3 +34,6 @@ class PostController extends Controller
         }
     }
 }
+
+
+?>
