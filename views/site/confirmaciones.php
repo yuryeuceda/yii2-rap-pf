@@ -300,7 +300,7 @@ $form = ActiveForm::begin([
         <div class="panel-footer clearfix text-right">
 
             <div class="form-group" style="margin:auto;">
-                <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
             </div>
         </div>
 
