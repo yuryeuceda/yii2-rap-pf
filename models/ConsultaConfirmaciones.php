@@ -10,6 +10,17 @@ use yii\base\Model;
  */
 class ConsultaConfirmaciones extends Model
 {
+    public $CHKnumeroSolicitud;
+    public $CHKnumeroIdentificacion;
+    public $CHKestatusSolicitud;
+    public $CHKfechaSolicitud;
+
+    public $numeroSolicitud;
+    public $numeroIdentificacion;
+    public $estatusSolicitud;
+    public $fechaSolicitud;
+    public $fechaSolicitudInicio;
+    public $fechaSolicitudFinal;
 
     /**
      * @return array the validation rules.

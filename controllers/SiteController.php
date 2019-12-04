@@ -58,7 +58,7 @@ class SiteController extends Controller
     public function actionConsultaConfirmaciones()
     {
         $model = new ConsultaConfirmaciones();
-        return $this->render('consultaconfirmacion', ['model' =>  $model]);
+        return $this->render('consultaConfirmaciones', ['model' =>  $model]);
     }
 
 

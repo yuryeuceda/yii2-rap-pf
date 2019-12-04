@@ -48,7 +48,7 @@ AppAsset::register($this);
                 ['label' => 'Contact', 'url' => ['/site/contact']],
                 ['label' => 'Confirmaciones', 'url' => ['/site/confirmaciones']],
                 ['label' => 'Confirmacion Acceso Financiero', 'url' => ['/site/confirmacion-acceso-financiamiento']],
-                ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consultaconfirmacion']],
+                ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consulta-confirmaciones']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
