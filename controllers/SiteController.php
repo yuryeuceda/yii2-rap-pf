@@ -45,10 +45,11 @@ class SiteController extends Controller
         $model = new Confirmaciones();
         return $this->render('confirmaciones', ['model' =>  $model]);
     }
-    public function actionConfirmacionAccesoFinancieroLP()
+
+    public function actionConfirmacionAccesoFinanciamientoLP()
     {
-        $model = new ConfirmacionAccesoFinancieroLP();
-        return $this->render('confirmacionAccesoFinancieroLP');
+        $model = new ConfirmacionAccesoFinanciamientoLP();
+        return $this->render('confirmacionAccesoFinanciamientoLP', ['model' =>  $model]);
     }
 
     /**

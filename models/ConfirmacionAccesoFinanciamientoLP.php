@@ -8,7 +8,7 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class ConfirmacionAccesoFinancieroLP extends Model
+class confirmacionAccesoFinanciamientoLP extends Model
 {
 
     /**
@@ -18,9 +18,9 @@ class ConfirmacionAccesoFinancieroLP extends Model
     {
         return [
             // name, email, subject and body are required
-            [['fechaSol', 'email', 'subject', 'body'], 'required'],
+            //[['fechaSol', 'email', 'subject', 'body'], 'required'],
             // email has to be a valid email address
-            ['fechaSol', 'email'],
+            //['fechaSol', 'email'],
 
         ];
     }
