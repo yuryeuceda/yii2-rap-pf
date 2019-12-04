@@ -8,7 +8,7 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class ConfirmacionAccesoFinanciamientoLP extends Model
+class ConfirmacionAccesoFinanciamiento extends Model
 {
 
     /**
