@@ -4,14 +4,23 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
+
 ?>
-<div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
 
+
+<div class="container">
+    <header style="margin:auto;">
+        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+    </header>
+
+
+    <div class="panel panel-default" style="margin-bottom: 10px;">
+
+        <div class="panel-heading">
+            <h3 class="panel-title">Ficha de solicitud de Creditos</h3>
+        </div>
+        <div class="panel-body"></div>
+    </div>
 </div>
