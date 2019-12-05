@@ -11,6 +11,16 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+
+    'modules' => [
+        'portal_financiero' => [
+            'class' => 'app\modules\portal_financiero\Module',
+        ],
+    ],
+
+
+
+
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
