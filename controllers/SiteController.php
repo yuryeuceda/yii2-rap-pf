@@ -12,6 +12,8 @@ use app\models\ContactForm;
 use app\models\Confirmaciones;
 use app\models\ConfirmacionAccesoFinanciamiento;
 use app\models\ConsultaConfirmaciones;
+use app\models\MensajeriaConfirmaciones;
+
 
 
 
@@ -59,6 +61,12 @@ class SiteController extends Controller
     {
         $model = new ConsultaConfirmaciones();
         return $this->render('consultaConfirmaciones', ['model' =>  $model]);
+    }
+
+    public function actionMensajeriaConfirmaciones()
+    {
+        $model = new MensajeriaConfirmaciones();
+        return $this->render('mensajeriaConfirmaciones', ['model' =>  $model]);
     }
 
 

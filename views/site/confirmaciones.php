@@ -50,7 +50,14 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                     <?= $form->field($model, 'numConf')->label('Numero de Confirmacion') ?>
                 </div>
                 <div class="col-lg-4">
-                    <?= $form->field($model, 'Tpres')->label('Tipo de Prestamo *') ?>
+
+                    <?= $form->field($model, 'Tid')->dropdownList(
+                        [
+                            1 => 'item 1',
+                            2 => 'item 2'
+                        ],
+                        ['prompt' => 'Seleccione Tipo de Prestamo']
+                    )->label('Tipo de Prestamo *'); ?>
                 </div>
             </div><!-- /.row -->
         </div>
@@ -77,7 +84,14 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tid')->textInput()->label('Tipo de Identificacion *') ?>
+
+                                                <?= $form->field($model, 'Tid')->dropdownList(
+                                                    [
+                                                        1 => 'item 1',
+                                                        2 => 'item 2'
+                                                    ],
+                                                    ['prompt' => 'Seleccione Tipo de Identificacion']
+                                                )->label('Tipo de Identificacion *'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -130,7 +144,13 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tid')->textInput()->label('Tipo de Identificacion *') ?>
+                                                <?= $form->field($model, 'Tid')->dropdownList(
+                                                    [
+                                                        1 => 'item 1',
+                                                        2 => 'item 2'
+                                                    ],
+                                                    ['prompt' => 'Seleccione Tipo de Identificacion']
+                                                )->label('Tipo de Identificacion *'); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -244,13 +264,25 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Tid')->textInput()->label('Destino del Crédito *') ?>
-
+                                        <?= $form->field($model, 'Tid')->dropdownList(
+                                            [
+                                                1 => 'item 1',
+                                                2 => 'item 2'
+                                            ],
+                                            ['prompt' => 'Seleccione Destino del Crédito']
+                                        )->label('Destino del Crédito *'); ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Nid')->label('Programa de Financiamiento *') ?>
+
+                                        <?= $form->field($model, 'Nid')->dropdownList(
+                                            [
+                                                1 => 'item 1',
+                                                2 => 'item 2'
+                                            ],
+                                            ['prompt' => 'Seleccione Programa de Financiamiento']
+                                        )->label('Programa de Financiamiento *'); ?>
                                     </div>
                                 </div>
 
@@ -263,7 +295,14 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Aaf')->label('Tipo de Garantia/Dirección *') ?>
+
+                                        <?= $form->field($model, 'Aaf')->dropdownList(
+                                            [
+                                                1 => 'item 1',
+                                                2 => 'item 2'
+                                            ],
+                                            ['prompt' => 'Seleccione Tipo de Garantia/Dirección']
+                                        )->label('Tipo de Garantia/Dirección *'); ?>
                                     </div>
                                 </div>
 
@@ -276,7 +315,13 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Naf')->label('Grado de Hipoteca *') ?>
+                                        <?= $form->field($model, 'Naf')->dropdownList(
+                                            [
+                                                1 => 'item 1',
+                                                2 => 'item 2'
+                                            ],
+                                            ['prompt' => 'Seleccione Grado de Hipoteca']
+                                        )->label('Grado de Hipoteca *'); ?>
                                     </div>
                                 </div>
                             </div>

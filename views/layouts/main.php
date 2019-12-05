@@ -43,12 +43,13 @@ AppAsset::register($this);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                /* ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']],
+                ['label' => 'Contact', 'url' => ['/site/contact']], */
                 ['label' => 'Confirmaciones', 'url' => ['/site/confirmaciones']],
                 ['label' => 'Confirmacion Acceso Financiero', 'url' => ['/site/confirmacion-acceso-financiamiento']],
                 ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consulta-confirmaciones']],
+                ['label' => 'mensajeria de Confirmaciones', 'url' => ['/site/mensajeria-confirmaciones']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(

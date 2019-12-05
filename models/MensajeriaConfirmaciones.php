@@ -8,19 +8,8 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class ConsultaConfirmaciones extends Model
+class MensajeriaConfirmaciones extends Model
 {
-    public $chkListBusqueda;
-    /* public $CHKnumeroIdentificacion;
-    public $CHKestatusSolicitud;
-    public $CHKfechaSolicitud; */
-
-    public $numeroSolicitud;
-    public $numeroIdentificacion;
-    public $estatusSolicitud;
-    public $fechaSolicitud;
-    public $fechaSolicitudInicio;
-    public $fechaSolicitudFinal;
 
     /**
      * @return array the validation rules.
