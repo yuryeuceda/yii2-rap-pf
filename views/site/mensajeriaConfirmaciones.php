@@ -38,8 +38,7 @@ $form = ActiveForm::begin([
         <div class=" panel panel-primary" style="margin-bottom: 10px;">
 
             <div class="panel-heading">
-                Detalle de Mensajes Intercambiados por Confirmacion
-
+                <b>Detalle de Mensajes Intercambiados por Confirmación</b>
             </div>
             <div class="panel-body" style="padding: 2px 6px;">
                 <div class="container">
@@ -68,7 +67,7 @@ $form = ActiveForm::begin([
 
                 <div class="card-body">
                     <table class="table table-bordered table-striped">
-                        <thead class="thead-dark">
+                        <thead style="background-color:#337ab7; color: white;">
                             <tr>
                                 <th scope="col">Número de Mensaje</th>
                                 <th scope="col">Consulta Realizada</th>
