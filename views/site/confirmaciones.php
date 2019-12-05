@@ -2,6 +2,8 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
+
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -23,11 +25,13 @@ $form = ActiveForm::begin([
 ]);
 
 
+$this->title = 'SOLICITUD DE CONFIRMACIÓN';
 ?>
 <!-- Comentario de prueba -->
 <div class="container">
     <header style="margin:auto;">
-        <h2><?= Html::encode($this->title) ?></h2>
+        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+        <img src="" alt="">
     </header>
 
 
@@ -40,7 +44,7 @@ $form = ActiveForm::begin([
             <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
             <div class="row">
                 <div class="col-lg-4">
-                    <?= $form->field($model, 'fechaSol')->textInput()->label('Fecha de Solicitud') ?>
+                    <?= $form->field($model,  'fechaSol')->textInput()->label('Fecha de Solicitud') ?>
                 </div>
                 <div class="col-lg-4">
                     <?= $form->field($model, 'numConf')->label('Numero de Confirmacion') ?>
@@ -241,6 +245,7 @@ $form = ActiveForm::begin([
                                 <div class="col-lg-6">
                                     <div class="">
                                         <?= $form->field($model, 'Tid')->textInput()->label('Destino del Crédito *') ?>
+
                                     </div>
                                 </div>
                                 <div class="col-lg-6">

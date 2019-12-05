@@ -5,12 +5,12 @@
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
-$this->title = 'Consulta de Confirmaciones';
+$this->title = 'CONSULTA DE CONFIRMACIONES';
 
 $form = ActiveForm::begin([
     'layout' => 'horizontal',
     'fieldConfig' => [
-        'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
+
         'horizontalCssClasses' => [
             'label' => 'col-sm-4',
             'offset' => 'col-md-12',
@@ -19,6 +19,8 @@ $form = ActiveForm::begin([
         ],
     ],
 ]);
+
+
 ?>
 
 <div class="container">
@@ -42,6 +44,7 @@ $form = ActiveForm::begin([
                             Seleccione el Tipo de Busqueda
                         </div>
                         <div class="panel-body">
+
                             <?= $form->field($model, 'CHKnumeroSolicitud')->checkbox()->label('Número de Solicitud') ?>
                             <?= $form->field($model, 'CHKnumeroIdentificacion')->checkbox()->label('Número de Identificacion') ?>
                             <?= $form->field($model, 'CHKestatusSolicitud')->checkbox()->label('Estatus de Solicitud') ?>
@@ -80,6 +83,12 @@ $form = ActiveForm::begin([
                             </div>
 
                         </div>
+                        <div class="panel-footer text-center">
+                            <div class="form-group" style="margin:auto;">
+                                <?= Html::submitButton('Buscar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -87,11 +96,6 @@ $form = ActiveForm::begin([
 
 
         </div>
-        <div class="panel-footer clearfix text-center">
 
-            <div class="form-group" style="margin:auto;">
-                <?= Html::submitButton('Buscar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
-            </div>
-        </div>
     </div>
 </div>

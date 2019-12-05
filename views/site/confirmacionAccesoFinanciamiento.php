@@ -32,12 +32,12 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
                 <h5 class="text-right" style="color:white;"><b>Moneda:</b> </h5>
 
             </div>
-            <div class="panel panel-primary" style="margin-bottom: 0px;">
+            <div class="panel panel-primary" style="margin-bottom: 0px; border-radius: 0px; border-color:#ddd;">
 
-                <div class="panel-heading">
+                <div class="panel-heading" style="border-radius: 0px;">
                     <h3 class="panel-title text-center" style="color:white;"><b>Tipo de Solicitud de Crédito</b></h3>
                 </div>
-                <div class="panel-body" style="padding-bottom: 0px;">
+                <div class="panel-body" style="padding-bottom: 0px; border-radius: 0px;">
                     <div class="row">
                         <div class="col-md-6">
                             <table class="table table-bordered">
@@ -71,11 +71,11 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
 
                 </div>
             </div>
-            <div class="panel panel-default" style="margin-bottom: 0px; ">
-                <div class="panel-heading" style="background-color:#fd642b;">
+            <div class="panel panel-default" style="margin-bottom: 0px; border-radius: 0px;">
+                <div class=" panel-heading" style="background-color:#fd642b; border-radius: 0px;">
                     <h3 class="panel-title text-center" style="color:white;"><b>Datos del Afiliado</b></h3>
                 </div>
-                <div class="panel-body" style="padding-bottom: 0px;">
+                <div class="panel-body" style="padding-bottom: 0px; border-radius: 0px;">
                     <div class="row">
                         <div class="col-md-6">
                             <table class="table table-bordered">
@@ -106,12 +106,12 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
                 </div>
             </div>
 
-            <div class="panel panel-primary" style="margin-bottom: 0px;">
-                <div class="panel-heading">
+            <div class="panel panel-primary" style="margin-bottom: 0px; border-radius: 0px; border-color:#ddd;">
+                <div class=" panel-heading" style="margin-bottom: 0px; border-radius: 0px;">
                     <h3 class="panel-title text-center" style="color:white;"><b>Acceso a Financiamiento</b></h3>
 
                 </div>
-                <div class="panel-body" style="padding-bottom: 0px;">
+                <div class="panel-body" style="padding-bottom: 0px; border-radius: 0px;">
                     <div class="row">
                         <div class="col-md-6">
                             <table class="table table-bordered">
@@ -162,12 +162,12 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
                 </div>
             </div>
 
-            <div class="panel panel-default" style="margin-bottom: 0px;">
-                <div class="panel-heading" style="background-color:#fd642b;">
+            <div class="panel panel-default" style="margin-bottom: 0px; border-radius: 0px;">
+                <div class=" panel-heading" style="background-color:#fd642b; border-radius: 0px;">
                     <h3 class="panel-title text-center" style="color:white;"><b>Información Para el Intermediario Financiero</b></h3>
 
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" style="border-radius: 0px;">
                     <div class="row">
                         <div class="col-md-6">
                             <table class="table table-bordered">
@@ -205,12 +205,12 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
                 </div>
             </div>
 
-            <div class="panel panel-primary" style="margin-bottom: s0px;">
-                <div class="panel-heading">
+            <div class="panel panel-primary" style="margin-bottom: 0px; border-radius: 0px; border-color:#ddd;">
+                <div class="panel-heading" style="border-radius: 0px;">
                     <h3 class="panel-title text-center" style="color:white;"><b>Observaciones</b></h3>
 
                 </div>
-                <div class="panel-body"></div>
+                <div class="panel-body" style="border-radius: 0px;"></div>
             </div>
 
         </div>
