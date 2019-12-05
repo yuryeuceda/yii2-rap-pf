@@ -21,7 +21,7 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
 
         <div class="panel-heading">
             <h4 class="panel-title text-center" style="margin-top: 0px;">RÉGIMEN DE APORTACIONES PRIVADAS</h4>
-            <h6 class="text-right" style="margin-top: 0px; margin-bottom: 0px;">JZAVALA</h6>
+            <h6 class="text-right" style="margin-top: 0px; margin-bottom: 0px;"><b>JZAVALA</b></h6>
             <h5 class="text-center" style="margin-bottom: 0px; margin-top: 0px;">CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO</h5>
         </div>
         <div class="panel-body">

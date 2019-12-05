@@ -147,3 +147,4 @@ $form = ActiveForm::begin([
                 </div>
             </div>
         </div>
+    </div>
