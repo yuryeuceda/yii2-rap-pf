@@ -30,20 +30,19 @@ $form = ActiveForm::begin([
         <img src="" alt="">
     </header>
 
-
-
     <div class="row">
 
 
-        <div class=" panel panel-primary" style="margin-bottom: 10px;">
+        <div class=" panel panel-primary" style="margin-bottom: 10px; ">
 
-            <div class="panel-heading">
+            <div class="panel-heading" style="background-color:#fd642b; color:white">
                 <b>Detalle de Mensajes Intercambiados por Confirmación</b>
             </div>
             <div class="panel-body" style="padding: 2px 6px;">
                 <div class="container">
-                    <div class="col-md-5">
-                        <table class="table">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
                             <tbody>
                                 <tr>
                                     <th>Número de Confirmación:</th>
@@ -63,9 +62,10 @@ $form = ActiveForm::begin([
                             </tbody>
                         </table>
                     </div>
+                    <div class="col-md-3"></div>
                 </div>
 
-                <div class="card-body">
+                <div class="panel-body">
                     <table class="table table-bordered table-striped">
                         <thead style="background-color:#337ab7; color: white;">
                             <tr>
@@ -99,13 +99,10 @@ $form = ActiveForm::begin([
 
 
             </div>
-            <div class="panel-footer text-center" style="padding: 4px 15px;">
-                <div class="form-group" style="margin:auto;">
-                    <?= Html::submitButton('Buscar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
-                </div>
-            </div>
+
 
         </div>
 
     </div>
+
 </div>

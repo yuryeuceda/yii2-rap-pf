@@ -50,6 +50,7 @@ AppAsset::register($this);
                 ['label' => 'Confirmacion Acceso Financiero', 'url' => ['/site/confirmacion-acceso-financiamiento']],
                 ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consulta-confirmaciones']],
                 ['label' => 'mensajeria de Confirmaciones', 'url' => ['/site/mensajeria-confirmaciones']],
+                ['label' => 'ingreso mensajes', 'url' => ['/site/ingreso-mensajes']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(

@@ -210,7 +210,11 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
                     <h3 class="panel-title text-center" style="color:white;"><b>Observaciones</b></h3>
 
                 </div>
-                <div class="panel-body" style="border-radius: 0px;"></div>
+                <div class="panel-body" style="border-radius: 0px;">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quo id
+                    quasi ducimus, officia quas veritatis distinctio error voluptate
+                    culpa explicabo dolores quia ut, nesciunt vero quis alias eos corrupti?
+                </div>
             </div>
 
         </div>

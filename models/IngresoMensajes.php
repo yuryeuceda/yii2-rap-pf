@@ -8,8 +8,9 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class MensajeriaConfirmaciones extends Model
+class IngresoMensajes extends Model
 {
+    public $mensajeDescripcion;
 
 
     /**

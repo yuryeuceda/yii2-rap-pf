@@ -13,7 +13,7 @@ use app\models\Confirmaciones;
 use app\models\ConfirmacionAccesoFinanciamiento;
 use app\models\ConsultaConfirmaciones;
 use app\models\MensajeriaConfirmaciones;
-
+use app\models\IngresoMensajes;
 
 
 
@@ -67,6 +67,12 @@ class SiteController extends Controller
     {
         $model = new MensajeriaConfirmaciones();
         return $this->render('mensajeriaConfirmaciones', ['model' =>  $model]);
+    }
+
+    public function actionIngresoMensajes()
+    {
+        $model = new IngresoMensajes();
+        return $this->render('ingresoMensajes', ['model' =>  $model]);
     }
 
 
