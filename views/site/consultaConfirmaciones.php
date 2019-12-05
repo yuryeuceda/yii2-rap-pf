@@ -33,9 +33,7 @@ $form = ActiveForm::begin([
 
     <div class="panel panel-default" style="margin-bottom: 10px;">
 
-        <div class="panel-heading">
 
-        </div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-3">
@@ -94,6 +92,14 @@ $form = ActiveForm::begin([
                     </div>
                 </div>
             </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel panel-default" style="margin-bottom: 10px;">
+        <div class="panel-body">
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-primary" style="margin-bottom: 10px;">
@@ -146,5 +152,6 @@ $form = ActiveForm::begin([
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
