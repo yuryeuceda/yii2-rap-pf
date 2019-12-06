@@ -1,53 +1,128 @@
-<?php
+ <?php
 
-/* @var $this yii\web\View */
+    use yii\helpers\Url;
+    /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
-?>
-<div class="site-index">
+    $this->title = 'My Yii Application';
+    ?>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+ <div class="site-index">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+     <div class="jumbotron">
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
 
-    <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+         <style>
+             .dropdown-submenu {
+                 position: relative;
+             }
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+             .dropdown-submenu>.dropdown-menu {
+                 top: 0;
+                 left: 100%;
+                 margin-top: -6px;
+                 margin-left: -1px;
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+             }
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+             .dropdown-submenu:hover>.dropdown-menu {
+                 display: block;
+             }
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+             .dropdown-submenu>a:after {
+                 display: block;
+                 content: " ";
+                 float: right;
+                 width: 0;
+                 height: 0;
+                 border-color: transparent;
+                 border-style: solid;
+                 border-width: 5px 0 5px 5px;
+                 border-left-color: #cccccc;
+                 margin-top: 5px;
+                 margin-right: -10px;
+             }
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+             .dropdown-submenu:hover>a:after {
+                 border-left-color: #ffffff;
+             }
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
+             .dropdown-submenu.pull-left {
+                 float: none;
+             }
 
-    </div>
-</div>
+             .dropdown-submenu.pull-left>.dropdown-menu {
+                 left: -100%;
+                 margin-left: 10px;
+
+             }
+         </style>
+
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Toggle navigation</span>
+
+                 </button>
+             </div>
+             <div class="collapse navbar-collapse navbar-ex1-collapse">
+                 <ul class="nav navbar-nav">
+                     <li class="menu-item dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background: lightgray;">Usuario Fulano de tal<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                             <li class="menu-item dropdown ">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi Perfil</a>
+
+                             </li>
+                             <li class="menu-item dropdown dropdown-submenu">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mis Tramites</a>
+                                 <ul class="dropdown-menu">
+                                     <li class="menu-item dropdown dropdown-submenu">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Confirmaciones</a>
+                                         <ul class="dropdown-menu">
+                                             <li>
+                                                 <a href="<?= Url::toRoute(['/site/confirmaciones']) ?>">Nueva Confirmación</a>
+                                             </li>
+                                             <li>
+                                                 <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>">Consultar Confirmación</a>
+                                             </li>
+                                         </ul>
+                                     </li>
+                                     <li class="menu-item dropdown dropdown-submenu">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Redescuentos</a>
+                                         <ul class="dropdown-menu">
+                                             <li>
+                                                 <a href="#">Nuevo Redescuento</a>
+                                             </li>
+                                             <li>
+                                                 <a href="#">Consultar Redescuento</a>
+                                             </li>
+                                         </ul>
+                                     </li>
+                                     <li class="menu-item dropdown dropdown-submenu">
+                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Desembolsos</a>
+                                         <ul class="dropdown-menu">
+                                             <li>
+                                                 <a href="#">Nuevo Desembolso</a>
+                                             </li>
+                                             <li>
+                                                 <a href="#">Consultar Desembolso</a>
+                                             </li>
+                                         </ul>
+                                     </li>
+                                 </ul>
+                             </li>
+                             <li class="menu-item dropdown">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Salir</a>
+
+                             </li>
+                         </ul>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+
+     </div>
+
+
+ </div>

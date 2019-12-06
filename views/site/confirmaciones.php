@@ -45,6 +45,7 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
             <div class="row">
                 <div class="col-lg-4">
                     <?= $form->field($model,  'fechaSol')->textInput()->label('Fecha de Solicitud') ?>
+
                 </div>
                 <div class="col-lg-4">
                     <?= $form->field($model, 'numConf')->label('Numero de Confirmacion') ?>

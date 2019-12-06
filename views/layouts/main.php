@@ -37,18 +37,18 @@ AppAsset::register($this);
             'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar-inverse navbar-fixed-top',
+                'class' => 'navbar-default  navbar-fixed-top',
             ],
         ]);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
-                /* ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
-                ['label' => 'Contact', 'url' => ['/site/contact']], */
-                ['label' => 'Confirmaciones', 'url' => ['/site/confirmaciones']],
+                ['label' => 'Inicio', 'url' => ['/site/index']],
+                /* ['label' => 'About', 'url' => ['/site/about']],
+                ['label' => 'Contact', 'url' => ['/site/contact']], 
+                ['label' => 'Confirmaciones', 'url' => ['/site/confirmaciones']],*/
                 ['label' => 'Confirmacion Acceso Financiero', 'url' => ['/site/confirmacion-acceso-financiamiento']],
-                ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consulta-confirmaciones']],
+                /*  ['label' => 'Consulta de Confirmaciones', 'url' => ['/site/consulta-confirmaciones']],*/
                 ['label' => 'mensajeria de Confirmaciones', 'url' => ['/site/mensajeria-confirmaciones']],
                 ['label' => 'ingreso mensajes', 'url' => ['/site/ingreso-mensajes']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
