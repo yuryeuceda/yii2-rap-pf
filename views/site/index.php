@@ -68,7 +68,7 @@
              <div class="collapse navbar-collapse navbar-ex1-collapse">
                  <ul class="nav navbar-nav">
                      <li class="menu-item dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background: lightgray;">Usuario Fulano de tal<b class="caret"></b></a>
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background: lightgray;">Usuario Banco Ficohsa<b class="caret"></b></a>
                          <ul class="dropdown-menu">
                              <li class="menu-item dropdown ">
                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi Perfil</a>
