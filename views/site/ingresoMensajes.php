@@ -82,7 +82,11 @@ $form = ActiveForm::begin([
                         </table>
                     </div>
                 </div>
-
+                <style>
+                    textarea {
+                        resize: none;
+                    }
+                </style>
                 <div class="card-body">
                     <?= $form->field($model, 'mensajeDescripcion')->textarea(['rows' => '6'])->label('Detalle del Mensaje:') ?>
                 </div>
