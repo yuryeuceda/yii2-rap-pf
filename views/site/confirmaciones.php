@@ -8,7 +8,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-
+use yii\jui\DatePicker;
 
 $form = ActiveForm::begin([
     'layout' => 'horizontal',
@@ -27,6 +27,12 @@ $form = ActiveForm::begin([
 
 $this->title = 'SOLICITUD DE CONFIRMACIÓN';
 ?>
+<style>
+    div.required label:after {
+        content: " *";
+        color: red;
+    }
+</style>
 <!-- Comentario de prueba -->
 <div class="container">
     <header style="margin:auto;">
@@ -41,24 +47,38 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
             <h3 class="panel-title">Ficha de solicitud de Creditos</h3>
         </div>
         <div class="panel-body">
-            <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+            <?php $form = ActiveForm::begin(['id' => 'confirmaciones']); ?>
             <div class="row">
                 <div class="col-lg-4">
-                    <?= $form->field($model,  'fechaSol')->textInput()->label('Fecha de Solicitud') ?>
+
+
+                    <?= $form->field($model, 'fecha_solicitud_confirmacion')->widget(DatePicker::classname(), [
+
+                        'language' => 'es',
+                        'dateFormat' => 'dd-MM-yyyy',
+                        'clientOptions' => [
+                            'changeMonth' => true,
+                            'changeYear' => true,
+                            'showButtonPanel' => true,
+                        ],
+
+                        'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
+                    ]); ?>
 
                 </div>
                 <div class="col-lg-4">
-                    <?= $form->field($model, 'numConf')->label('Numero de Confirmacion') ?>
+                    <?= $form->field($model, 'numero_confirmacion') ?>
+
                 </div>
                 <div class="col-lg-4">
 
-                    <?= $form->field($model, 'Tid')->dropdownList(
+                    <?= $form->field($model, 'tipo_prestamo')->dropdownList(
                         [
                             1 => 'item 1',
                             2 => 'item 2'
                         ],
                         ['prompt' => 'Seleccione Tipo de Prestamo']
-                    )->label('Tipo de Prestamo *'); ?>
+                    ) ?>
                 </div>
             </div><!-- /.row -->
         </div>
@@ -81,57 +101,57 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                         <div class="col-md-6" style="padding-right: 8px;">
                             <div class="panel panel-primary" style="margin-bottom: 0px;">
                                 <div class="panel-heading">Persona 1</div>
-                                <div class="panel-body" style="    background-color: ghostwhite;">
+                                <div class="panel-body" style="background-color: ghostwhite;">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
 
-                                                <?= $form->field($model, 'Tid')->dropdownList(
+                                                <?= $form->field($model, 'tipo_identificacion')->dropdownList(
                                                     [
                                                         1 => 'item 1',
                                                         2 => 'item 2'
                                                     ],
                                                     ['prompt' => 'Seleccione Tipo de Identificacion']
-                                                )->label('Tipo de Identificacion *'); ?>
+                                                ); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Nid')->label('Numero de Identificacion *') ?>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="">
-                                                <?= $form->field($model, 'emailA')->label('Email *') ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="">
-                                                <?= $form->field($model, 'Aaf')->label('Apellido de Afiliado *') ?>
+                                                <?= $form->field($model, 'numero_identificacion') ?>
                                             </div>
                                         </div>
 
                                     </div>
                                     <div class="row">
-
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tcelular')->label('Telefono Celular *') ?>
+                                                <?= $form->field($model, 'email_afiliado') ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Naf')->label('Nombre de Afiliado *') ?>
+                                                <?= $form->field($model, 'apellido_afiliado') ?>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'telefono_celular') ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'nombre_afiliado') ?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tfijo')->label('Telefono Fijo') ?>
+                                                <?= $form->field($model, 'telefono_fijo') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -145,49 +165,49 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tid')->dropdownList(
+                                                <?= $form->field($model, 'tipo_identificacion2')->dropdownList(
                                                     [
                                                         1 => 'item 1',
                                                         2 => 'item 2'
                                                     ],
-                                                    ['prompt' => 'Seleccione Tipo de Identificacion']
-                                                )->label('Tipo de Identificacion *'); ?>
+                                                    ['prompt' => 'Seleccione Tipo de Identificación']
+                                                ); ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Nid')->label('Numero de Identificacion *') ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="">
-                                                <?= $form->field($model, 'emailA')->label('Email *') ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="">
-                                                <?= $form->field($model, 'Aaf')->label('Apellido de Afiliado *') ?>
+                                                <?= $form->field($model, 'numero_identificacion2') ?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tcelular')->label('Telefono Celular *') ?>
+                                                <?= $form->field($model, 'email_afiliado2') ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Naf')->label('Nombre de Afiliado *') ?>
+                                                <?= $form->field($model, 'apellido_afiliado2') ?>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'Tfijo')->label('Telefono Fijo') ?>
+                                                <?= $form->field($model, 'telefono_celular2') ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'nombre_afiliado2') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="">
+                                                <?= $form->field($model, 'telefono_fijo2') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -205,26 +225,31 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <div class="">
-                                            <?= $form->field($model, 'Naf')->label('Nombre de
-                                    Empresa') ?>
+                                            <?= $form->field($model, 'nombre_empresa') ?>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-lg-4">
+
+                                    <?= $form->field($model, 'fecha_ingreso')->widget(DatePicker::classname(), [
+
+                                        'language' => 'es',
+                                        'dateFormat' => 'dd-MM-yyyy',
+                                        'clientOptions' => [
+                                            'changeMonth' => true,
+                                            'changeYear' => true,
+                                            'showButtonPanel' => true,
+                                        ],
+
+                                        'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
+                                    ]); ?>
+
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
 
                                         <div class="">
-                                            <?= $form->field($model, 'Naf')->label('Fecha de
-                                    Ingreso') ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-
-                                        <div class="">
-                                            <?= $form->field($model, 'Naf')->label('Antiguedad
-                                    Laboral') ?>
+                                            <?= $form->field($model, 'antieguedad_laboral') ?>
                                         </div>
                                     </div>
                                 </div>
@@ -238,20 +263,17 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Tid')->label('Salario
-                                    Nominal') ?>
+                                        <?= $form->field($model, 'salario_nominal') ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Nid')->label('Salario
-                                    Neto') ?>
+                                        <?= $form->field($model, 'salario_neto') ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'emailA')->label('Otros
-                                    Ingresos') ?>
+                                        <?= $form->field($model, 'otros_ingresos') ?>
                                     </div>
                                 </div>
                             </div>
@@ -265,25 +287,25 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Tid')->dropdownList(
+                                        <?= $form->field($model, 'destino_credito')->dropdownList(
                                             [
                                                 1 => 'item 1',
                                                 2 => 'item 2'
                                             ],
                                             ['prompt' => 'Seleccione Destino del Crédito']
-                                        )->label('Destino del Crédito *'); ?>
+                                        ); ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
 
-                                        <?= $form->field($model, 'Nid')->dropdownList(
+                                        <?= $form->field($model, 'programa_financiamiento')->dropdownList(
                                             [
                                                 1 => 'item 1',
                                                 2 => 'item 2'
                                             ],
                                             ['prompt' => 'Seleccione Programa de Financiamiento']
-                                        )->label('Programa de Financiamiento *'); ?>
+                                        ); ?>
                                     </div>
                                 </div>
 
@@ -291,19 +313,20 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'emailA')->label('Monto Solicitado *') ?>
+                                        <?= $form->field($model, 'monto_solicitado') ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
 
-                                        <?= $form->field($model, 'Aaf')->dropdownList(
+                                        <?= $form->field($model, 'tipo_garantia')->dropdownList(
                                             [
                                                 1 => 'item 1',
                                                 2 => 'item 2'
                                             ],
                                             ['prompt' => 'Seleccione Tipo de Garantia/Dirección']
-                                        )->label('Tipo de Garantia/Dirección *'); ?>
+                                        ); ?>
+
                                     </div>
                                 </div>
 
@@ -311,25 +334,25 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Tfijo')->label('Plazo Solicitado *') ?>
+                                        <?= $form->field($model, 'plazo_solicitado') ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Naf')->dropdownList(
+                                        <?= $form->field($model, 'grado_hipoteca')->dropdownList(
                                             [
                                                 1 => 'item 1',
                                                 2 => 'item 2'
                                             ],
                                             ['prompt' => 'Seleccione Grado de Hipoteca']
-                                        )->label('Grado de Hipoteca *'); ?>
+                                        ); ?>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'Tcelular')->label('Otros Ingresos') ?>
+                                        <?= $form->field($model, 'otros_ingresos_condiciones') ?>
                                     </div>
                                 </div>
                             </div>
@@ -344,7 +367,8 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                 <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
             </div>
         </div>
-
+        <?php Yii::$app->session->setFlash('warning', 'Atención Existen Campos Vacíos'); ?>
+        <?php echo \yii2mod\notify\BootstrapNotify::widget(); ?>
 
     </div>
 
