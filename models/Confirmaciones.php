@@ -58,16 +58,17 @@ class Confirmaciones extends Model
     public function rules()
     {
         return [
-            [[
-                'tipo_prestamo', 'tipo_identificacion', 'numero_identificacion',
-                'email_afiliado', 'apellido_afiliado', 'telefono_celular',
-                'nombre_afiliado', 'tipo_identificacion2',
-                'numero_identificacion2', 'email_afiliado2', 'apellido_afiliado2',
-                'telefono_celular2', 'nombre_afiliado2', 'salario_nominal', 'nombre_empresa', 'fecha_ingreso',
-                'salario_neto', 'antieguedad_laboral', 'destino_credito',
-                'programa_financiamiento', 'monto_solicitado', 'plazo_solicitado',
-                'tipo_garantia', 'grado_hipoteca', 'fecha_solicitud_confirmacion'
-            ], 'required'],
+            [
+                [
+                    'tipo_prestamo', 'tipo_identificacion', 'numero_identificacion', 'email_afiliado', 'apellido_afiliado', 'telefono_celular',
+                    'nombre_afiliado', 'tipo_identificacion2', 'numero_identificacion2', 'email_afiliado2', 'apellido_afiliado2',
+                    'telefono_celular2', 'nombre_afiliado2', 'salario_nominal', 'nombre_empresa', 'fecha_ingreso', 'salario_neto',
+                    'antieguedad_laboral', 'destino_credito', 'programa_financiamiento', 'monto_solicitado', 'plazo_solicitado',
+                    'tipo_garantia', 'grado_hipoteca'
+                ], 'required'
+            ],
+            //['email_afiliado', 'email'],
+            // ['telefono_celular', 'integer', 'max' => 8],
 
 
         ];

@@ -4,6 +4,7 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = ' DETALLE DE MENSAJES INTERCAMBIADOS POR CONFIRMACIÓN';
 
@@ -26,8 +27,19 @@ $form = ActiveForm::begin([
 
 <div class="container">
     <header style="margin:auto;">
-        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
-        <img src="" alt="">
+        <div class="row">
+            <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+        </div>
+        <div class="row">
+            <div class="col-md-8"> </div>
+            <div class="col-md-4" style="padding-bottom: 4px;">
+                <div class="col-md-3"></div>
+                <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>"><img src=" ../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+                <a href="#"><img src="../web/img/RAP_PDF.png" class="img-thumbnail" alt="" style="width: 54px;"></a>
+                <a href="<?= Url::toRoute(['/site/ingreso-mensajes']) ?>"><img src="../web/img/RAP_MENSAJES.png" class="img-thumbnail" alt="" style="width: 61px;"></a>
+                <a href="#"><img src="../web/img/RAP_ACTUALIZAR.png" class="img-thumbnail" alt="" style="width: 61px;"></a>
+            </div>
+        </div>
     </header>
 
     <div class="row">
@@ -90,7 +102,8 @@ $form = ActiveForm::begin([
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
+                                <td>Larry the Bird</td>
+                                <td>@twitter</td>
                                 <td>@twitter</td>
                             </tr>
                         </tbody>

@@ -4,6 +4,8 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\jui\DatePicker;
 
 $this->title = 'CONSULTA DE CONFIRMACIONES';
 
@@ -26,23 +28,34 @@ $form = ActiveForm::begin([
 
 <div class="container">
     <header style="margin:auto;">
-        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
-        <img src="" alt="">
+        <div class="row">
+            <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+        </div>
+        <div class="row">
+            <div class="col-md-8"> </div>
+            <div class="col-md-4" style="padding-bottom: 4px;">
+                <div class="col-md-3"></div>
+                <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>"><img src=" ../web/img/RAP_BUSQUEDA.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+                <a href="<?= Url::toRoute(['/site/confirmaciones']) ?>"><img src="../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+                <a href="#"><img src="../web/img/RAP_PDF.png" class="img-thumbnail" alt="" style="width: 54px;"></a>
+                <a href="#"><img src="../web/img/RAP_ACTUALIZAR.png" class="img-thumbnail" alt="" style="width: 61px;"></a>
+            </div>
+        </div>
     </header>
 
 
     <div class="panel panel-default" style="margin-bottom: 10px;">
 
 
-        <div class="panel-body">
+        <div class="panel-body" style="padding: 10px 10PX 0px 10px;">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="panel panel-primary" style="margin-bottom: 10px;">
+                    <div class="panel panel-primary" style="margin-bottom: 10px; ">
 
                         <div class="panel-heading">
                             Seleccione el Tipo de Busqueda
                         </div>
-                        <div class="panel-body" style="padding: 3px 9px 61px 14px;">
+                        <div class="panel-body" style="padding: 3px 9px 61px 14px; ">
                             <?= $form->field($model, 'chkListBusqueda')->label('')->checkboxList([
                                 1 => 'Número de Solicitud',
                                 2 => 'Número de Identificación',
@@ -55,7 +68,7 @@ $form = ActiveForm::begin([
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <div class="panel panel-primary" style="margin-bottom: 10px;">
+                    <div class="panel panel-primary" style="margin-bottom: 10px; ">
 
                         <div class="panel-heading">
                             Seleccione Parametros de Busqueda
@@ -63,25 +76,52 @@ $form = ActiveForm::begin([
                         <div class="panel-body" style="padding: 2px 6px;">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'numeroSolicitud')->label('Numero Solicitud') ?>
+                                    <?= $form->field($model, 'numero_solicitud') ?>
                                 </div>
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'numeroIdentificacion')->label('Numero Identificacion') ?>
+                                    <?= $form->field($model, 'numero_identificacion')->widget(\yii\widgets\MaskedInput::className(), [
+                                        'mask' => '9999-9999-99999',
+                                    ]) ?>
                                 </div>
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'estatusSolicitud')->label('Estatus Solicitud') ?>
+                                    <?= $form->field($model, 'estatus_solicitud')->dropdownList(
+                                        [
+                                            1 => 'item 1',
+                                            2 => 'item 2'
+                                        ],
+                                        ['prompt' => 'Seleccione Estatus']
+                                    ); ?>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'fechaSolicitudInicio')->textInput()->label('Fecha Inicio') ?>
+                                    <?= $form->field($model, 'fecha_solicitud_inicio')->widget(DatePicker::classname(), [
+
+                                        'language' => 'es',
+                                        'dateFormat' => 'dd-MM-yyyy',
+                                        'clientOptions' => [
+                                            'changeMonth' => true,
+                                            'changeYear' => true,
+                                            'showButtonPanel' => true,
+                                        ],
+                                        'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
+                                    ]); ?>
                                 </div>
+
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'fechaSolicitudFinal')->label('Fecha Final') ?>
+                                    <?= $form->field($model, 'fecha_solicitud_final')->widget(DatePicker::classname(), [
+
+                                        'language' => 'es',
+                                        'dateFormat' => 'dd-MM-yyyy',
+                                        'clientOptions' => [
+                                            'changeMonth' => true,
+                                            'changeYear' => true,
+                                            'showButtonPanel' => true,
+                                        ],
+                                        'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
+                                    ]); ?>
                                 </div>
-
                             </div>
-
                         </div>
                         <div class="panel-footer text-center" style="padding: 4px 15px;">
                             <div class="form-group" style="margin:auto;">
@@ -98,7 +138,7 @@ $form = ActiveForm::begin([
     </div>
 
     <div class="panel panel-default" style="margin-bottom: 10px;">
-        <div class="panel-body">
+        <div class="panel-body" style="padding: 10px 10PX 0px 10px;">
 
             <div class="row">
                 <div class="col-md-12">

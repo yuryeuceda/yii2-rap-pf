@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
 
@@ -12,12 +13,23 @@ $this->title = 'CONFIRMACIÓN DE ACCESO A FINANCIAMIENTO DE LARGO PLAZO';
 
 <div class="container">
     <header style="margin:auto;">
-        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
-        <img src="" alt="">
+        <div class="row">
+            <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+        </div>
+        <div class="row">
+            <div class="col-md-8"> </div>
+            <div class="col-md-4" style="padding-bottom: 4px;">
+                <div class="col-md-5"></div>
+                <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>"><img src=" ../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+                <a href="#"><img src="../web/img/RAP_PDF.png" class="img-thumbnail" alt="" style="width: 54px;"></a>
+                <a href="<?= Url::toRoute(['/site/ingreso-mensajes']) ?>"><img src="../web/img/RAP_MENSAJES.png" class="img-thumbnail" alt="" style="width: 61px;"></a>
+
+            </div>
+        </div>
     </header>
 
 
-    <div class="panel panel-default" style="margin-bottom: 10px;">
+    <div class="panel panel-info" style="margin-bottom: 10px;">
 
         <div class="panel-heading">
             <h4 class="panel-title text-center" style="margin-top: 0px;">RÉGIMEN DE APORTACIONES PRIVADAS</h4>

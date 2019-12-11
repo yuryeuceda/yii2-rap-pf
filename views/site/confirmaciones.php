@@ -4,6 +4,7 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -25,6 +26,7 @@ $form = ActiveForm::begin([
 ]);
 
 
+
 $this->title = 'SOLICITUD DE CONFIRMACIÓN';
 ?>
 <style>
@@ -33,11 +35,23 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
         color: red;
     }
 </style>
+
+
 <!-- Comentario de prueba -->
 <div class="container">
+
     <header style="margin:auto;">
-        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
-        <img src="" alt="">
+
+        <div class="row">
+            <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+        </div>
+        <div class="row">
+            <div class="col-md-10"> </div>
+            <div class="col-md-2" style="padding-bottom: 4px;">
+                <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>"><img src=" ../web/img/RAP_BUSQUEDA.png" class="img-thumbnail" alt="Consulta de Confirmaciones" style="width: 60px;"></a>
+                <a href="<?= Url::toRoute(['/site/confirmaciones']) ?>"><img src="../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+            </div>
+        </div>
     </header>
 
 
@@ -60,6 +74,7 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             'changeMonth' => true,
                             'changeYear' => true,
                             'showButtonPanel' => true,
+                            'disabled' => true,
                         ],
 
                         'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
@@ -67,7 +82,7 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
 
                 </div>
                 <div class="col-lg-4">
-                    <?= $form->field($model, 'numero_confirmacion') ?>
+                    <?= $form->field($model, 'numero_confirmacion')->textInput(['readonly' => true]) ?>
 
                 </div>
                 <div class="col-lg-4">
@@ -117,7 +132,9 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'numero_identificacion') ?>
+                                                <?= $form->field($model, 'numero_identificacion')->widget(\yii\widgets\MaskedInput::className(), [
+                                                    'mask' => '9999-9999-99999',
+                                                ]) ?>
                                             </div>
                                         </div>
 
@@ -139,7 +156,10 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
 
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'telefono_celular') ?>
+                                                <?= $form->field($model, 'telefono_celular')->widget(\yii\widgets\MaskedInput::className(), [
+                                                    'mask' => '9999-9999',
+                                                ]) ?>
+
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -151,7 +171,9 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'telefono_fijo') ?>
+                                                <?= $form->field($model, 'telefono_fijo')->widget(\yii\widgets\MaskedInput::className(), [
+                                                    'mask' => '9999-9999',
+                                                ]) ?>
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +217,9 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'telefono_celular2') ?>
+                                                <?= $form->field($model, 'telefono_celular2')->widget(\yii\widgets\MaskedInput::className(), [
+                                                    'mask' => '9999-9999',
+                                                ]) ?>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -207,7 +231,9 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="">
-                                                <?= $form->field($model, 'telefono_fijo2') ?>
+                                                <?= $form->field($model, 'telefono_fijo2')->widget(\yii\widgets\MaskedInput::className(), [
+                                                    'mask' => '9999-9999',
+                                                ]) ?>
                                             </div>
                                         </div>
                                     </div>
@@ -239,6 +265,7 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                             'changeMonth' => true,
                                             'changeYear' => true,
                                             'showButtonPanel' => true,
+
                                         ],
 
                                         'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
@@ -254,29 +281,53 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-primary" style="margin-bottom: 0px;">
-                        <div class="panel-heading">Detalle de ingresos del
-                            afiliado</div>
-                        <div class="panel-body" style="    background-color: ghostwhite;">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <div class="">
-                                        <?= $form->field($model, 'salario_nominal') ?>
+                                        <?= $form->field($model, 'salario_nominal')->widget(\yii\widgets\MaskedInput::className(), [
+                                            'clientOptions' => [
+                                                'alias' => 'decimal',
+                                                'groupSeparator' => ',',
+                                                'autoGroup' => true
+                                            ]
+                                        ]) ?>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <div class="">
-                                        <?= $form->field($model, 'salario_neto') ?>
+                                        <?= $form->field($model, 'salario_neto')->widget(\yii\widgets\MaskedInput::className(), [
+                                            'clientOptions' => [
+                                                'alias' => 'decimal',
+                                                'groupSeparator' => ',',
+                                                'autoGroup' => true
+                                            ]
+                                        ]) ?>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-lg-4">
                                     <div class="">
-                                        <?= $form->field($model, 'otros_ingresos') ?>
+                                        <?= $form->field($model, 'otros_ingresos')->widget(\yii\widgets\MaskedInput::className(), [
+                                            'clientOptions' => [
+                                                'alias' => 'decimal',
+                                                'groupSeparator' => ',',
+                                                'autoGroup' => true
+                                            ]
+                                        ]) ?>
                                     </div>
                                 </div>
                             </div>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10"></div>
+                        <div class="col-md-2">
+                            <div class="col-md-1"></div>
+                            <a class="btn btn-success" style="width: 60px;"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a class="btn btn-danger" style="width: 60px;"><i class="glyphicon glyphicon-minus"></i></a>
                         </div>
                     </div>
                 </div>
@@ -313,7 +364,13 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'monto_solicitado') ?>
+                                        <?= $form->field($model, 'monto_solicitado')->widget(\yii\widgets\MaskedInput::className(), [
+                                            'clientOptions' => [
+                                                'alias' => 'decimal',
+                                                'groupSeparator' => ',',
+                                                'autoGroup' => true
+                                            ]
+                                        ]) ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -352,7 +409,13 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="">
-                                        <?= $form->field($model, 'otros_ingresos_condiciones') ?>
+                                        <?= $form->field($model, 'otros_ingresos_condiciones')->widget(\yii\widgets\MaskedInput::className(), [
+                                            'clientOptions' => [
+                                                'alias' => 'decimal',
+                                                'groupSeparator' => ',',
+                                                'autoGroup' => true
+                                            ]
+                                        ]) ?>
                                     </div>
                                 </div>
                             </div>
@@ -367,8 +430,8 @@ $this->title = 'SOLICITUD DE CONFIRMACIÓN';
                 <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'btnEnviarConfirmacion']) ?>
             </div>
         </div>
-        <?php Yii::$app->session->setFlash('warning', 'Atención Existen Campos Vacíos'); ?>
-        <?php echo \yii2mod\notify\BootstrapNotify::widget(); ?>
+        <?php /** Yii::$app->session->setFlash('warning', 'Atención Existen Campos Vacíos'); */ ?>
+        <?php /** echo \yii2mod\notify\BootstrapNotify::widget(); */ ?>
 
     </div>
 

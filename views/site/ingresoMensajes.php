@@ -4,6 +4,7 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'INGRESO DE MENSAJES';
 
@@ -26,8 +27,17 @@ $form = ActiveForm::begin([
 
 <div class="container">
     <header style="margin:auto;">
-        <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
-        <img src="" alt="">
+
+        <div class="row">
+            <h4 class="text-center"><B><?= Html::encode($this->title) ?></B></h4>
+        </div>
+        <div class="row">
+            <div class="col-md-10"> </div>
+            <div class="col-md-2" style="padding-bottom: 4px;">
+                <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>"><img src=" ../web/img/RAP_BUSQUEDA.png" class="img-thumbnail" alt="Consulta de Confirmaciones" style="width: 60px;"></a>
+                <a href="<?= Url::toRoute(['/site/confirmaciones']) ?>"><img src="../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+            </div>
+        </div>
     </header>
     <div class="row">
 
@@ -45,17 +55,14 @@ $form = ActiveForm::begin([
                                 <tr>
                                     <th>Número de Confirmación:</th>
                                     <th>CFR00013</th>
-
                                 </tr>
                                 <tr>
                                     <th>Tipo de Financiamiento:</th>
                                     <th>BONO CONVIVIENDA</th>
-
                                 </tr>
                                 <tr>
                                     <th>Estatus:</th>
                                     <th>EN ANÁLISIS</th>
-
                                 </tr>
                             </tbody>
                         </table>
@@ -66,17 +73,14 @@ $form = ActiveForm::begin([
                                 <tr>
                                     <th>Número de Mensaje:</th>
                                     <th>00000013</th>
-
                                 </tr>
                                 <tr>
                                     <th>Usuario:</th>
                                     <th>Yury</th>
-
                                 </tr>
                                 <tr>
                                     <th>Fecha Consulta:</th>
                                     <th>05/10/2019 13:10:45</th>
-
                                 </tr>
                             </tbody>
                         </table>
@@ -88,7 +92,7 @@ $form = ActiveForm::begin([
                     }
                 </style>
                 <div class="card-body">
-                    <?= $form->field($model, 'mensajeDescripcion')->textarea(['rows' => '6'])->label('Detalle del Mensaje:') ?>
+                    <?= $form->field($model, 'mensajeDescripcion')->textarea(['rows' => '6', 'type' => 'text', 'maxlength' => 4000])->label('Detalle del Mensaje:') ?>
                 </div>
 
 
