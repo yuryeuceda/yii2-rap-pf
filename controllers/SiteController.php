@@ -75,6 +75,10 @@ class SiteController extends Controller
         return $this->render('ingresoMensajes', ['model' =>  $model]);
     }
 
+    public function actionLogon()
+    {
+        return $this->render('loginn');
+    }
 
 
     /**
