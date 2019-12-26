@@ -57,11 +57,11 @@ $form = ActiveForm::begin([
                         </div>
                         <div class="panel-body" style="padding: 3px 9px 61px 14px; ">
                             <?= $form->field($model, 'chkListBusqueda')->label('')->checkboxList([
-                                1 => 'Número de Solicitud',
-                                2 => 'Número de Identificación',
-                                3 => 'Estatus de Solicitud',
-                                4 => 'Fecha Solicitud',
-                            ]); ?>
+                                            1 => 'Número de Confirmación',
+                                            2 => 'Número de Identificación',
+                                            3 => 'Estatus de Confirmación',
+                                            4 => 'Fecha Confirmación',
+                                        ]); ?>
 
 
                         </div>
@@ -73,53 +73,53 @@ $form = ActiveForm::begin([
                         <div class="panel-heading">
                             Seleccione Parametros de Busqueda
                         </div>
-                        <div class="panel-body" style="padding: 2px 6px;">
+                        <div class="panel-body" style="padding: 5px 6px;">
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'numero_solicitud') ?>
+                                    <?= $form->field($model, 'numero_confirmacion') ?>
                                 </div>
                                 <div class="col-lg-4">
                                     <?= $form->field($model, 'numero_identificacion')->widget(\yii\widgets\MaskedInput::className(), [
-                                        'mask' => '9999-9999-99999',
-                                    ]) ?>
+                                            'mask' => '9999-9999-99999',
+                                        ]) ?>
                                 </div>
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'estatus_solicitud')->dropdownList(
-                                        [
-                                            1 => 'item 1',
-                                            2 => 'item 2'
-                                        ],
-                                        ['prompt' => 'Seleccione Estatus']
-                                    ); ?>
+                                    <?= $form->field($model, 'estatus_confirmacion')->dropdownList(
+                                            [
+                                                1 => 'item 1',
+                                                2 => 'item 2'
+                                            ],
+                                            ['prompt' => 'Seleccione Estatus']
+                                        ); ?>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'fecha_solicitud_inicio')->widget(DatePicker::classname(), [
+                                    <?= $form->field($model, 'fecha_confirmacion_inicio')->widget(DatePicker::classname(), [
 
-                                        'language' => 'es',
-                                        'dateFormat' => 'dd-MM-yyyy',
-                                        'clientOptions' => [
-                                            'changeMonth' => true,
-                                            'changeYear' => true,
-                                            'showButtonPanel' => true,
-                                        ],
-                                        'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
-                                    ]); ?>
+                                            'language' => 'es',
+                                            'dateFormat' => 'dd-MM-yyyy',
+                                            'clientOptions' => [
+                                                'changeMonth' => true,
+                                                'changeYear' => true,
+                                                'showButtonPanel' => true,
+                                            ],
+                                            'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
+                                        ]); ?>
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <?= $form->field($model, 'fecha_solicitud_final')->widget(DatePicker::classname(), [
+                                    <?= $form->field($model, 'fecha_confirmacion_final')->widget(DatePicker::classname(), [
 
-                                        'language' => 'es',
-                                        'dateFormat' => 'dd-MM-yyyy',
-                                        'clientOptions' => [
-                                            'changeMonth' => true,
-                                            'changeYear' => true,
-                                            'showButtonPanel' => true,
-                                        ],
-                                        'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
-                                    ]); ?>
+                                            'language' => 'es',
+                                            'dateFormat' => 'dd-MM-yyyy',
+                                            'clientOptions' => [
+                                                'changeMonth' => true,
+                                                'changeYear' => true,
+                                                'showButtonPanel' => true,
+                                            ],
+                                            'options' => ['class' => 'form-control', 'autocomplete' => 'off',]
+                                        ]); ?>
                                 </div>
                             </div>
                         </div>
@@ -154,9 +154,9 @@ $form = ActiveForm::begin([
                                         <th scope="col">Número de Confirmación</th>
                                         <th scope="col">Tipo de Financiamiento</th>
                                         <th scope="col">Tipo de Crédito</th>
-                                        <th scope="col">Fecha Solicitud</th>
+                                        <th scope="col">Fecha Confirmación</th>
                                         <th scope="col">Analista de Credito RAP</th>
-                                        <th scope="col">Estatus Solicitud</th>
+                                        <th scope="col">Estatus Confirmación</th>
                                         <th scope="col">Acciones</th>
                                     </tr>
                                 </thead>

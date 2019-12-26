@@ -12,14 +12,14 @@ class ConsultaConfirmaciones extends Model
 {
     public $chkListBusqueda;
     /* public $CHKnumeroIdentificacion;
-    public $CHKestatusSolicitud;
-    public $CHKfechaSolicitud; */
+    public $CHKestatusconfirmacion;
+    public $CHKfechaconfirmacion; */
 
-    public $numero_solicitud;
+    public $numero_confirmacion;
     public $numero_identificacion;
-    public $estatus_solicitud;
-    public $fecha_solicitud_inicio;
-    public $fecha_solicitud_final;
+    public $estatus_confirmacion;
+    public $fecha_confirmacion_inicio;
+    public $fecha_confirmacion_final;
 
     /**
      * @return array the validation rules.

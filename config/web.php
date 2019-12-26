@@ -26,6 +26,16 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'dVXXi8VpCUKtwtLqPFs2vcfLdyiXi4rw',
         ],
+        //componente del sevicio web
+        /*
+        'siteApi' => [
+            'class' => 'mongosoft\soapclient\Client',
+            'url' => 'http://192.168.3.49:8090/ws/RAPService?wsdl',
+            'options' => [
+                'cache_wsdl' => WSDL_CACHE_NONE,
+            ],
+        ],
+        */
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

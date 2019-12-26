@@ -5,15 +5,20 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\helpers\Html;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Confirmaciones;
+use app\models\EmpleadoIngresos;
+use app\models\Model;
 use app\models\ConfirmacionAccesoFinanciamiento;
 use app\models\ConsultaConfirmaciones;
 use app\models\MensajeriaConfirmaciones;
 use app\models\IngresoMensajes;
+use app\models\AgregarPersonas;
+
 
 
 
@@ -48,8 +53,35 @@ class SiteController extends Controller
     public function actionConfirmaciones()
     {
         $model = new Confirmaciones();
-        return $this->render('confirmaciones', ['model' =>  $model]);
+        $AgregarPersona = [new AgregarPersonas];
+        $EmpleadoIngresos = [[new EmpleadoIngresos]];
+
+
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $EmpleadoIngresos = Model::createMultiple(EmpleadoIngresos::classname());
+            Model::loadMultiple($EmpleadoIngresos, Yii::$app->request->post());
+
+            // validate all models
+            $valid = $model->validate();
+            $valid = Model::validateMultiple($EmpleadoIngresos) && $valid;
+        }
+        $client = new \mongosoft\soapclient\Client([
+            'url' => 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL',
+        ]);
+
+
+
+        return $this->render(
+            'confirmaciones',
+            [
+
+                'model' =>  $model, 'client' =>  $client, 'EmpleadoIngresos' => (empty($EmpleadoIngresos)) ? [[new EmpleadoIngresos]] : $EmpleadoIngresos,
+                'AgregarPersonas' => (empty($AgregarPersona)) ? [new AgregarPersonas] : $AgregarPersona
+            ]
+        );
     }
+
 
     public function actionConfirmacionAccesoFinanciamiento()
     {
@@ -77,7 +109,10 @@ class SiteController extends Controller
 
     public function actionLogon()
     {
-        return $this->render('loginn');
+        $model = new LoginForm();
+        return $this->render('loginn', [
+            'model' => $model,
+        ]);
     }
 
 

@@ -74,6 +74,7 @@ class Confirmaciones extends Model
         ];
     }
 
+
     public function attributeLabels()
     {
         return [

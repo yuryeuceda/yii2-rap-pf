@@ -123,7 +123,7 @@ $this->registerJs($js);
         NavBar::end();
         ?>
 
-        <div class="container">
+        <div class="container" style="width: 100%">
             <div class="row">
                 <div class="col-md-8"> </div>
                 <div class="col-md-4">
@@ -131,7 +131,7 @@ $this->registerJs($js);
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
                             <li class="menu-item dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background: lightgray;">Usuario Banco Ficohsa<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background: lightgray;">Usuario banco Davivienda<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="menu-item dropdown ">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi Perfil</a>
