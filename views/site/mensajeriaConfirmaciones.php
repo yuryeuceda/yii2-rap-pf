@@ -34,7 +34,7 @@ $form = ActiveForm::begin([
             <div class="col-md-8"> </div>
             <div class="col-md-4" style="padding-bottom: 4px;">
                 <div class="col-md-3"></div>
-                <a href="<?= Url::toRoute(['/site/consulta-confirmaciones']) ?>"><img src=" ../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
+                <a href="<?= Url::toRoute(['/site/confirmaciones']) ?>"><img src=" ../web/img/RAP_CONFIRM.png" class="img-thumbnail" alt="" style="width: 60px;"></a>
                 <a href="#"><img src="../web/img/RAP_PDF.png" class="img-thumbnail" alt="" style="width: 54px;"></a>
                 <a href="<?= Url::toRoute(['/site/ingreso-mensajes']) ?>"><img src="../web/img/RAP_MENSAJES.png" class="img-thumbnail" alt="" style="width: 61px;"></a>
                 <a href="#"><img src="../web/img/RAP_ACTUALIZAR.png" class="img-thumbnail" alt="" style="width: 61px;"></a>
